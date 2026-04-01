@@ -30,5 +30,5 @@ features:
     details: "15 篇深度对比与原理剖析，Options vs Composition、ref vs reactive、Pinia vs Vuex 等"
     link: /lessons/deep-dives/D01-options-vs-composition
   - title: "全程 Composition API"
-    details: "主线代码全程采用 Composition API + <script setup> 语法糖，拥抱 Vue 3 最佳实践"
+    details: "主线代码全程采用 Composition API + &lt;script setup&gt; 语法糖，拥抱 Vue 3 最佳实践"
 ---
