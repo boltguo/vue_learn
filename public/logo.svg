@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <!-- Background circle with subtle gradient -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="128" y2="128" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#42b883" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#35495e" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="vue-outer" x1="32" y1="20" x2="96" y2="90" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#42b883"/>
+      <stop offset="100%" stop-color="#3aa876"/>
+    </linearGradient>
+    <linearGradient id="vue-inner" x1="48" y1="28" x2="80" y2="70" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#35495e"/>
+      <stop offset="100%" stop-color="#2c3e50"/>
+    </linearGradient>
+    <linearGradient id="book" x1="20" y1="85" x2="108" y2="115" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#35495e"/>
+      <stop offset="100%" stop-color="#2c3e50"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Soft background -->
+  <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+
+  <!-- Vue chevron - outer (green) -->
+  <path d="M64 18 L96 18 L64 74 L32 18 Z" fill="url(#vue-outer)"/>
+
+  <!-- Vue chevron - inner (dark) -->
+  <path d="M64 18 L80 18 L64 50 L48 18 Z" fill="url(#vue-inner)"/>
+
+  <!-- Open book shape at bottom -->
+  <path d="M18 98 Q18 88 34 88 L62 88 Q64 88 64 90 Q64 88 66 88 L94 88 Q110 88 110 98 L110 108 Q110 112 94 112 L66 112 Q64 112 64 110 Q64 112 62 112 L34 112 Q18 112 18 108 Z"
+        fill="url(#book)" opacity="0.9"/>
+
+  <!-- Book spine line -->
+  <line x1="64" y1="88" x2="64" y2="112" stroke="#42b883" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Book page lines - left -->
+  <line x1="28" y1="95" x2="56" y2="95" stroke="#5a7a96" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+  <line x1="30" y1="100" x2="54" y2="100" stroke="#5a7a96" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+  <line x1="32" y1="105" x2="52" y2="105" stroke="#5a7a96" stroke-width="1" stroke-linecap="round" opacity="0.2"/>
+
+  <!-- Book page lines - right -->
+  <line x1="72" y1="95" x2="100" y2="95" stroke="#5a7a96" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+  <line x1="74" y1="100" x2="98" y2="100" stroke="#5a7a96" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+  <line x1="76" y1="105" x2="96" y2="105" stroke="#5a7a96" stroke-width="1" stroke-linecap="round" opacity="0.2"/>
+
+  <!-- Small sparkle accent -->
+  <circle cx="98" cy="28" r="2.5" fill="#42b883" opacity="0.6"/>
+  <circle cx="103" cy="22" r="1.5" fill="#42b883" opacity="0.4"/>
+  <circle cx="93" cy="22" r="1" fill="#42b883" opacity="0.3"/>
+</svg>
