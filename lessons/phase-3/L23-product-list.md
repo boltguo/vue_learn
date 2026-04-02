@@ -428,7 +428,7 @@ async function execute() {
 
 ### 🔬 深度专题
 
-> 📖 [D13 · 请求竞态处理](/lessons/deep-dives/D13-request-race) — 快速切换页面时如何避免数据错乱？
+> 📖 [D13 · 请求竞态处理](/lessons/deep-dives/D13-race-conditions) — 快速切换页面时如何避免数据错乱？
 
 ### 检查清单
 

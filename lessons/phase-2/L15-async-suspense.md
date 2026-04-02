@@ -500,7 +500,7 @@ const stats = await response.json()
 
 ### 🔬 深度专题
 
-> 📖 [D10 · Suspense 现状与限制](/lessons/deep-dives/D10-suspense-status) — 为什么 Suspense 仍是实验性功能？
+> 📖 [D10 · Suspense 现状与限制](/lessons/deep-dives/D10-suspense-limitations) — 为什么 Suspense 仍是实验性功能？
 
 ### 检查清单
 
