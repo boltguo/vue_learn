@@ -93,7 +93,7 @@ flowchart TD
     style L08 fill:#42b883,color:#fff
 ```
 
-### L01 · 项目脚手架 + 开发环境
+### [L01 · 项目脚手架 + 开发环境](/lessons/phase-1/L01-project-setup)
 
 ```
 🎯 本节目标：用 Vite 创建 Vue 3 项目，理解项目结构
@@ -130,7 +130,7 @@ flowchart TB
     style Webpack fill:#ff634720,stroke:#ff6347
 ```
 
-### L02 · 第一个组件：TodoItem
+### [L02 · 第一个组件：TodoItem](/lessons/phase-1/L02-first-component)
 
 ```
 🎯 本节目标：创建 TodoItem 组件，理解 Props 单向数据流
@@ -145,7 +145,7 @@ flowchart TB
 - Props 单向数据流原则
 - 模板插值 `{{ }}` 与属性绑定 `:bind`
 
-### L03 · 响应式数据：让 Todo 动起来
+### [L03 · 响应式数据：让 Todo 动起来](/lessons/phase-1/L03-reactivity)
 
 ```
 🎯 本节目标：掌握 ref() 和 reactive()，理解 Vue 3 响应式心智模型
@@ -174,7 +174,7 @@ sequenceDiagram
     Template->>User: 视图自动刷新
 ```
 
-### L04 · 列表渲染：v-for 与 key 的秘密
+### [L04 · 列表渲染：v-for 与 key 的秘密](/lessons/phase-1/L04-list-rendering)
 
 ```
 🎯 本节目标：用 v-for 渲染 Todo 列表，理解 key 在 diff 算法中的角色
@@ -189,7 +189,7 @@ sequenceDiagram
 - 为什么不要用 `index` 作为 key（动画/表单状态丢失）
 - 数组变更检测：`push`/`splice` vs 直接赋值
 
-### L05 · 条件渲染与事件：完成 / 删除
+### [L05 · 条件渲染与事件：完成 / 删除](/lessons/phase-1/L05-conditionals-events)
 
 ```
 🎯 本节目标：实现 Todo 的完成切换和删除功能
@@ -204,7 +204,7 @@ sequenceDiagram
 - `defineEmits()` 类型声明
 - CSS 过渡：`<Transition>` 组件入门
 
-### L06 · 表单与 v-model：双向绑定
+### [L06 · 表单与 v-model：双向绑定](/lessons/phase-1/L06-v-model)
 
 ```
 🎯 本节目标：用 v-model 实现 Todo 内联编辑，理解双向绑定本质
@@ -219,7 +219,7 @@ sequenceDiagram
 - 修饰符：`.trim`、`.lazy`、`.number`
 - 表单验证基础
 
-### L07 · computed 与 watch：筛选 + 统计
+### [L07 · computed 与 watch：筛选 + 统计](/lessons/phase-1/L07-computed-watch)
 
 ```
 🎯 本节目标：用 computed 实现智能筛选，用 watch 实现副作用
@@ -252,7 +252,7 @@ flowchart LR
     style stats fill:#42b883,color:#fff
 ```
 
-### L08 · 本地持久化：localStorage + Composable
+### [L08 · 本地持久化：localStorage + Composable](/lessons/phase-1/L08-localstorage-composable)
 
 ```
 🎯 本节目标：将 Todo 数据持久化到 localStorage，并抽取第一个 Composable
@@ -317,7 +317,7 @@ flowchart TD
     style L18 fill:#35495e,color:#fff
 ```
 
-### L09 · 架构升级：从单文件到工程化
+### [L09 · 架构升级：从单文件到工程化](/lessons/phase-2/L09-architecture)
 
 ```
 🎯 本节目标：将 Phase 1 的单文件 Todo 重构为多组件架构
@@ -360,7 +360,7 @@ flowchart TB
     style After fill:#42b88330,stroke:#42b883
 ```
 
-### L10 · Vue Router：从单页到多页
+### [L10 · Vue Router：从单页到多页](/lessons/phase-2/L10-vue-router)
 
 ```
 🎯 本节目标：集成 Vue Router，实现任务视图、统计视图、设置页面的路由
@@ -398,7 +398,7 @@ flowchart LR
     style guard fill:#ff6b6b,color:#fff
 ```
 
-### L11 · Pinia：全局状态管理
+### [L11 · Pinia：全局状态管理](/lessons/phase-2/L11-pinia)
 
 ```
 🎯 本节目标：用 Pinia 替代 localStorage composable，实现跨组件状态共享
@@ -437,7 +437,7 @@ flowchart TB
     style Pinia fill:#f9a82520,stroke:#f9a825
 ```
 
-### L12 · 任务分类与标签系统
+### [L12 · 任务分类与标签系统](/lessons/phase-2/L12-categories-tags)
 
 ```
 🎯 本节目标：为任务添加分类、优先级和标签系统
@@ -446,7 +446,7 @@ flowchart TB
 🔗 后续钩子：L13 将在分类基础上添加拖拽排序
 ```
 
-### L13 · 拖拽排序：交互升级
+### [L13 · 拖拽排序：交互升级](/lessons/phase-2/L13-drag-drop)
 
 ```
 🎯 本节目标：实现任务的拖拽排序和跨分类移动
@@ -461,7 +461,7 @@ flowchart TB
 - 看板视图（Kanban Board）实现
 - 拖拽状态管理与动画过渡
 
-### L14 · 组件通信全景：provide/inject + defineExpose
+### [L14 · 组件通信全景：provide/inject + defineExpose](/lessons/phase-2/L14-component-communication)
 
 ```
 🎯 本节目标：掌握 Vue 3 全部组件通信方式，在正确场景用正确方案
@@ -492,7 +492,7 @@ flowchart TB
     style pinia fill:#f9a825,color:#000
 ```
 
-### L15 · 异步组件与 Suspense
+### [L15 · 异步组件与 Suspense](/lessons/phase-2/L15-async-suspense)
 
 ```
 🎯 本节目标：理解异步组件加载和 Suspense 的使用与限制
@@ -501,7 +501,7 @@ flowchart TB
 🔗 后续钩子：L16 将在此基础上添加自定义指令
 ```
 
-### L16 · 自定义指令 + 主题系统
+### [L16 · 自定义指令 + 主题系统](/lessons/phase-2/L16-directives-theme)
 
 ```
 🎯 本节目标：创建自定义指令（v-focus、v-permission），实现暗色主题切换
@@ -510,7 +510,7 @@ flowchart TB
 🔗 后续钩子：L17 将为所有功能编写测试
 ```
 
-### L17 · 单元测试：Vitest + Vue Test Utils
+### [L17 · 单元测试：Vitest + Vue Test Utils](/lessons/phase-2/L17-testing)
 
 ```
 🎯 本节目标：为核心组件和 Composable 编写单元测试
@@ -526,7 +526,7 @@ flowchart TB
 - Composable 测试：独立于组件的逻辑测试
 - Store 测试：Pinia `createTestingPinia`
 
-### L18 · 部署上线：CI/CD
+### [L18 · 部署上线：CI/CD](/lessons/phase-2/L18-deployment)
 
 ```
 🎯 本节目标：将应用部署到 Vercel，配置 GitHub Actions CI
@@ -570,7 +570,7 @@ flowchart TD
     style L30 fill:#ff6b6b,color:#fff
 ```
 
-### L19 · 后端搭建：Express + MongoDB
+### [L19 · 后端搭建：Express + MongoDB](/lessons/phase-3/L19-backend-setup)
 
 ```
 🎯 本节目标：搭建 Node.js 后端服务，连接 MongoDB 数据库
@@ -610,7 +610,7 @@ flowchart LR
     style DB fill:#4db33d20,stroke:#4db33d
 ```
 
-### L20 · RESTful API：CRUD 全流程
+### [L20 · RESTful API：CRUD 全流程](/lessons/phase-3/L20-restful-api)
 
 ```
 🎯 本节目标：实现商品和用户的完整 CRUD API
@@ -619,7 +619,7 @@ flowchart LR
 🔗 后续钩子：L21 将在前端封装 Axios 调用这些 API
 ```
 
-### L21 · Axios 封装：请求层抽象
+### [L21 · Axios 封装：请求层抽象](/lessons/phase-3/L21-axios)
 
 ```
 🎯 本节目标：封装 Axios 实例，实现请求/响应拦截器
@@ -653,7 +653,7 @@ sequenceDiagram
     Composable-->>Component: { data, error, loading }
 ```
 
-### L22 · JWT 认证：登录注册
+### [L22 · JWT 认证：登录注册](/lessons/phase-3/L22-jwt-auth)
 
 ```
 🎯 本节目标：实现完整的 JWT 认证流程（注册、登录、Token 刷新）
@@ -669,7 +669,7 @@ sequenceDiagram
 - 前端 Token 存储：localStorage vs httpOnly Cookie
 - 深度专题参考：D14（JWT vs Session 对比）
 
-### L23 · 商品列表：分页 + 搜索 + 筛选
+### [L23 · 商品列表：分页 + 搜索 + 筛选](/lessons/phase-3/L23-product-list)
 
 ```
 🎯 本节目标：实现商品列表的服务端分页、搜索和多条件筛选
@@ -685,7 +685,7 @@ sequenceDiagram
 - 请求竞态处理（参见深度专题 D13）
 - 虚拟滚动：`vue-virtual-scroller`
 
-### L24 · 购物车：复杂状态管理
+### [L24 · 购物车：复杂状态管理](/lessons/phase-3/L24-cart)
 
 ```
 🎯 本节目标：实现购物车的添加、删除、数量修改、全选、合计
@@ -694,7 +694,7 @@ sequenceDiagram
 🔗 后续钩子：L25 将基于购物车数据创建订单
 ```
 
-### L25 · 订单系统：状态机设计
+### [L25 · 订单系统：状态机设计](/lessons/phase-3/L25-order-system)
 
 ```
 🎯 本节目标：实现订单创建、支付、发货、收货的状态流转
@@ -715,7 +715,7 @@ stateDiagram-v2
     已取消 --> [*]
 ```
 
-### L26 · 支付模拟：异步流程编排
+### [L26 · 支付模拟：异步流程编排](/lessons/phase-3/L26-payment)
 
 ```
 🎯 本节目标：模拟支付流程，掌握复杂异步状态管理
@@ -724,7 +724,7 @@ stateDiagram-v2
 🔗 后续钩子：L28 将用 WebSocket 替代轮询
 ```
 
-### L27 · 文件上传：图片处理
+### [L27 · 文件上传：图片处理](/lessons/phase-3/L27-file-upload)
 
 ```
 🎯 本节目标：实现商品图片的上传、预览、裁剪
@@ -733,7 +733,7 @@ stateDiagram-v2
 🔗 后续钩子：可复用于任何需要上传的场景
 ```
 
-### L28 · WebSocket：实时通知
+### [L28 · WebSocket：实时通知](/lessons/phase-3/L28-websocket)
 
 ```
 🎯 本节目标：用 WebSocket 实现订单状态实时推送
@@ -761,7 +761,7 @@ sequenceDiagram
     Client->>WS: 指数退避重连
 ```
 
-### L29 · SSR 与 Nuxt：首屏优化
+### [L29 · SSR 与 Nuxt：首屏优化](/lessons/phase-3/L29-ssr-nuxt)
 
 ```
 🎯 本节目标：理解 SSR 原理，用 Nuxt 实现服务端渲染
@@ -777,7 +777,7 @@ sequenceDiagram
 - SEO 优化：`useHead`、meta 标签
 - Hydration 原理与常见问题
 
-### L30 · 性能优化 + E2E 测试 + Phase 3 总结
+### [L30 · 性能优化 + E2E 测试 + Phase 3 总结](/lessons/phase-3/L30-performance-e2e)
 
 ```
 🎯 本节目标：前后端性能优化 + Playwright E2E 测试 + Phase 3 完整回顾
@@ -816,7 +816,7 @@ flowchart TD
     style L38 fill:#764ba2,color:#fff
 ```
 
-### L31 · 响应式原理：Proxy vs Object.defineProperty
+### [L31 · 响应式原理：Proxy vs Object.defineProperty](/lessons/phase-4/L31-proxy-reactivity)
 
 ```
 🎯 本节目标：手写简化版响应式系统，理解 Proxy 相比 defineProperty 的优势
@@ -857,7 +857,7 @@ flowchart TB
     style Vue3 fill:#42b88320,stroke:#42b883
 ```
 
-### L32 · 依赖追踪：effect、track、trigger
+### [L32 · 依赖追踪：effect、track、trigger](/lessons/phase-4/L32-dependency-tracking)
 
 ```
 🎯 本节目标：实现 effect/track/trigger 三件套，理解自动依赖收集机制
@@ -886,7 +886,7 @@ sequenceDiagram
     TargetMap->>Effect: 重新执行 effect.fn()
 ```
 
-### L33 · Virtual DOM：O(n) diff 算法
+### [L33 · Virtual DOM：O(n) diff 算法](/lessons/phase-4/L33-virtual-dom)
 
 ```
 🎯 本节目标：理解 Vue 3 的 VNode 结构和 patch 算法，能解释 key 的本质作用
@@ -928,7 +928,7 @@ flowchart TB
     style unkeyedDiff fill:#ff6347,color:#fff
 ```
 
-### L34 · 编译时优化：静态提升 + 靶向更新
+### [L34 · 编译时优化：静态提升 + 靶向更新](/lessons/phase-4/L34-compiler-optimization)
 
 ```
 🎯 本节目标：理解 Vue 3 编译器的静态分析优化，解释 Block Tree 和 PatchFlags
@@ -964,7 +964,7 @@ flowchart LR
     style After fill:#42b88320,stroke:#42b883
 ```
 
-### L35 · 调度器原理：nextTick 与批量更新
+### [L35 · 调度器原理：nextTick 与批量更新](/lessons/phase-4/L35-scheduler-nexttick)
 
 ```
 🎯 本节目标：理解 Vue 3 的异步更新队列和 nextTick 实现
@@ -1000,7 +1000,7 @@ sequenceDiagram
     Note over DOM: count: 0 → 3（一步到位）
 ```
 
-### L36 · 组件实例与渲染流程
+### [L36 · 组件实例与渲染流程](/lessons/phase-4/L36-component-rendering)
 
 ```
 🎯 本节目标：理解 Vue 3 组件从创建到销毁的完整生命周期
@@ -1038,7 +1038,7 @@ flowchart TD
     style cleanup fill:#ff6b6b,color:#fff
 ```
 
-### L37 · Composition API 设计哲学
+### [L37 · Composition API 设计哲学](/lessons/phase-4/L37-composition-api-philosophy)
 
 ```
 🎯 本节目标：从语言设计层面理解 Composition API 的取舍
@@ -1053,7 +1053,7 @@ flowchart TD
 - `ref` vs `reactive` 的本质区别与选择哲学（详见深度专题 D05）
 - TypeScript 类型推断：Composition API 天生友好
 
-### L38 · Vapor Mode：无虚拟 DOM 的未来
+### [L38 · Vapor Mode：无虚拟 DOM 的未来](/lessons/phase-4/L38-vapor-mode)
 
 ```
 🎯 本节目标：理解 Vue Vapor Mode 的设计目标与实现思路

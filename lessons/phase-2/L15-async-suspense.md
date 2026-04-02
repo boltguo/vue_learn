@@ -497,6 +497,11 @@ const stats = await response.json()
 
 ## 8. 本节总结
 
+
+### 🔬 深度专题
+
+> 📖 [D10 · Suspense 现状与限制](/lessons/deep-dives/D10-suspense-status) — 为什么 Suspense 仍是实验性功能？
+
 ### 检查清单
 
 - [ ] 理解异步组件解决的打包体积问题

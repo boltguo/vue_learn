@@ -338,7 +338,7 @@ describe('TodoItem', () => {
       props: { ...defaultProps, done: true },
     })
     const text = wrapper.find('.todo-text')
-    expect(text.classes()).toContain('line-through')
+    expect(text.classes()).toContain('is-done')  // 完成状态的 CSS class
   })
 })
 ```

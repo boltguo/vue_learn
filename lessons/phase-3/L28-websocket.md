@@ -258,6 +258,7 @@ export interface Notification {
   read: boolean
 }
 
+// 模块级变量：所有调用 useNotifications() 的组件共享同一份通知列表（单例模式）
 const notifications = ref<Notification[]>([])
 
 export function useNotifications() {
@@ -291,7 +292,11 @@ export function useNotifications() {
 }
 
 // 浏览器原生通知
-function showBrowserNotification(n: Notification) {
+async function showBrowserNotification(n: Notification) {
+  // 首次需要请求用户授权
+  if (Notification.permission === 'default') {
+    await Notification.requestPermission()
+  }
   if (Notification.permission === 'granted') {
     new Notification(n.title, { body: n.message })
   }

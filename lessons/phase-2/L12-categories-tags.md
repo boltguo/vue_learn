@@ -745,6 +745,7 @@ const categoryCounts = computed(() => {
 ```vue
 <!-- src/components/todo/FilterBar.vue -->
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useTaskStore } from '@/stores/taskStore'
 import { useTagStore } from '@/stores/tagStore'
 import { storeToRefs } from 'pinia'

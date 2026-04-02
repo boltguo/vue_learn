@@ -153,12 +153,18 @@ flowchart TB
 
 ```typescript
 // src/types/injection-keys.ts
-import type { InjectionKey, Ref } from 'vue'
+import type { InjectionKey, Ref, DeepReadonly } from 'vue'
 
-// 用 Symbol 作为 key + 泛型约束类型
-export const ThemeKey: InjectionKey<Ref<'light' | 'dark'>> = Symbol('theme')
+// 简单场景：只传 Ref
 export const LocaleKey: InjectionKey<Ref<string>> = Symbol('locale')
 export const UserKey: InjectionKey<Ref<{ name: string; role: string } | null>> = Symbol('user')
+
+// 复杂场景：传数据 + 方法的组合（§4.3 使用）
+export interface ThemeContext {
+  theme: DeepReadonly<Ref<'light' | 'dark'>>
+  toggleTheme: () => void
+}
+export const ThemeKey: InjectionKey<ThemeContext> = Symbol('theme')
 ```
 
 ```typescript
@@ -184,9 +190,9 @@ function toggleTheme() {
 
 // 同时 provide 数据和修改方法
 provide(ThemeKey, {
-  theme: readonly(theme),      // 只读，防止后代直接篡改
+  theme: readonly(theme),      // DeepReadonly<Ref>，防止后代直接篡改
   toggleTheme,                 // 修改必须通过提供的方法
-})
+})  // ✅ 类型与 ThemeKey: InjectionKey<ThemeContext> 一致
 ```
 
 ```typescript

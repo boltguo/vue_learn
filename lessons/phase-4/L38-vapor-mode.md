@@ -309,4 +309,9 @@ Vapor 简化为：
 git add .
 git commit -m "L38: Vapor Mode + Phase 4 完成 [全课程完结]"
 git tag phase-4-complete
+
+### 🔬 深度专题
+
+> 📖 [D15 · Vapor Mode 原理](/lessons/deep-dives/D15-vapor-mode) — 没有虚拟 DOM 的 Vue 还是 Vue 吗？
+
 ```

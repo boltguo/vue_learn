@@ -128,6 +128,8 @@ const email = defineModel<string>('email')
 
 <!-- CustomInput.vue -->
 <script setup>
+// 注意：set() 中引用的 modifiers 在解构完成后才存在
+// 这是合法的 JS — 闭包捕获的是变量引用而非值，set() 被调用时 modifiers 已初始化
 const [model, modifiers] = defineModel<string>({
   set(value) {
     if (modifiers.capitalize) {

@@ -725,6 +725,11 @@ flowchart TB
     style Learned fill:#42b88310,stroke:#42b883
 ```
 
+
+### 🔬 深度专题
+
+> 📖 [D01 · Options API vs Composition API](/lessons/deep-dives/D01-options-vs-composition) — 为什么本教程全程使用 Composition API？
+
 ### 检查清单
 
 - [ ] 能用 `npm create vue@latest` 创建项目

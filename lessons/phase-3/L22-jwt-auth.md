@@ -50,6 +50,13 @@ sequenceDiagram
 
 ## 2. 后端：认证 API
 
+首先安装本节依赖：
+
+```bash
+npm install bcryptjs jsonwebtoken
+npm install -D @types/bcryptjs @types/jsonwebtoken
+```
+
 ```typescript
 // server/src/controllers/authController.ts
 import { Request, Response, NextFunction } from 'express'
@@ -239,6 +246,7 @@ export const useAuthStore = defineStore('auth', () => {
     refreshToken.value = null
     localStorage.removeItem('access-token')
     localStorage.removeItem('refresh-token')
+    // 🏭 生产环境还需调用 POST /api/auth/logout 让服务端吊销 refreshToken（加入黑名单）
   }
 
   // ─── 刷新 Token ───

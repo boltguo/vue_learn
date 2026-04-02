@@ -161,6 +161,9 @@ function getUserPermissions(): string[] {
 </template>
 ```
 
+> [!WARNING]
+> **前端权限控制 ≠ 安全！** `v-permission` 只是 UI 层隐藏元素，用户可以通过 DevTools 恢复元素或直接调 API 绕过。所有敏感操作**必须在后端验证权限**，前端指令只是用户体验优化。
+
 ---
 
 ## 4. 实战指令三：v-click-outside

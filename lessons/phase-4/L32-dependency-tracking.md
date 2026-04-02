@@ -70,7 +70,7 @@ class ReactiveEffect {
     for (const dep of this.deps) {
       dep.delete(this)
     }
-    this.deps.length = 0  // 清空引用列表
+    this.deps.length = 0  // 等价于 this.deps = []，但复用同一个数组对象，避免重新分配内存
   }
 
   stop() {
@@ -386,6 +386,11 @@ scope.stop()  // 一次性停止所有 scope 内的 effect
 git add .
 git commit -m "L32: 依赖追踪深入 - cleanup/嵌套/scheduler/computed/ref 原理"
 ```
+
+
+### 🔬 深度专题
+
+> 📖 [D06 · 依赖追踪：effect / track / trigger](/lessons/deep-dives/D06-effect-track-trigger) — computed 的缓存到底怎么实现的？
 
 ### 🔗 → 下一节
 

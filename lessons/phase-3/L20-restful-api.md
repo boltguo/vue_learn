@@ -92,6 +92,9 @@ export function error(res: Response, message: string, statusCode = 400) {
 
 ---
 
+> [!TIP]
+> 下面的控制器示例为了可读性直接使用 `res.json()`。实际项目中建议统一使用上面的 `success()` / `error()` 工具函数，确保响应格式一致。
+
 ## 3. 商品控制器
 
 ```typescript
@@ -238,10 +241,10 @@ export async function updateProduct(req: Request, res: Response, next: NextFunct
 // DELETE /api/products/:id — 删除商品（软删除）
 export async function deleteProduct(req: Request, res: Response, next: NextFunction) {
   try {
+    // 软删除：标记为不活跃（不需要 { new: true }，因为 204 不返回 body）
     const product = await Product.findByIdAndUpdate(
       req.params.id,
-      { isActive: false },  // 软删除：标记为不活跃
-      { new: true }
+      { isActive: false },
     )
 
     if (!product) {

@@ -142,7 +142,7 @@ export async function getPaymentStatus(req: Request, res: Response) {
 
 ```typescript
 // client/src/composables/usePolling.ts
-import { ref, onUnmounted } from 'vue'
+import { ref, onUnmounted, type Ref } from 'vue'
 
 interface UsePollingOptions<T> {
   interval?: number       // 轮询间隔（ms），默认 2000

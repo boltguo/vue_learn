@@ -236,20 +236,7 @@ async function refresh(req, res) {
 
 ---
 
-## 8. 何时选哪个
-
-| 场景 | 推荐 |
-|------|------|
-| SPA + API 后端 | ✅ JWT |
-| 传统服务端渲染 | ✅ Session |
-| 微服务架构 | ✅ JWT（无状态） |
-| 需要即时注销 | ✅ Session |
-| 移动端 App | ✅ JWT |
-| 第三方 API | ✅ JWT (OAuth) |
-
----
-
-## 9. 生产环境安全检查清单
+## 8. 生产环境安全检查清单
 
 - [ ] Access Token 有效期 ≤ 15 分钟
 - [ ] Refresh Token 存 httpOnly + Secure + SameSite Cookie
@@ -261,7 +248,7 @@ async function refresh(req, res) {
 
 ---
 
-## 10. 总结
+## 9. 总结
 
 - JWT 是**无状态认证**，适合 SPA 和分布式系统
 - Session 是**有状态认证**，注销更可控

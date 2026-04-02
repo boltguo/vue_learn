@@ -203,11 +203,15 @@ flowchart TB
 
 ```typescript
 // Vue 源码简化：flush 前排序
+// 注意：实际 Vue 源码用数组（而非 §2 简化版的 Set），因为数组支持 sort
+const queue: SchedulerJob[] = []
+
 function flushJobs() {
-  queue.sort((a, b) => a.id - b.id)  // uid 升序 → 父先子后
+  queue.sort((a, b) => (a.id ?? 0) - (b.id ?? 0))  // uid 升序 → 父先子后
   for (const job of queue) {
     job()
   }
+  queue.length = 0
 }
 ```
 

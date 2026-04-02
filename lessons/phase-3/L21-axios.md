@@ -276,6 +276,10 @@ export const authApi = {
   getProfile() {
     return request.get<any, { data: any }>('/auth/profile')
   },
+
+  refresh(refreshToken: string) {
+    return request.post<any, { accessToken: string }>('/auth/refresh', { refreshToken })
+  },
 }
 ```
 

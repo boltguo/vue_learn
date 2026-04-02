@@ -1,3 +1,12 @@
+---
+prev:
+  text: 'L07 · computed 与 watch'
+  link: '/lessons/phase-1/L07-computed-watch'
+next:
+  text: '🚀 Phase 2 → L09 · 架构升级'
+  link: '/lessons/phase-2/L09-architecture'
+---
+
 # L08 · 本地持久化：localStorage + Composable
 
 ```
@@ -403,6 +412,11 @@ flowchart TB
 | v-model | L06 | 能解释语法糖本质 |
 | computed + watch | L07 | 能区分使用场景 |
 | Composable | L08 | 能抽取可复用逻辑 |
+
+
+### 🔬 深度专题
+
+> 📖 [D09 · Composables vs React Hooks](/lessons/deep-dives/D09-composables-vs-hooks) — 同样是"钩子"，为什么心智模型完全不同？
 
 ### Git 提交
 

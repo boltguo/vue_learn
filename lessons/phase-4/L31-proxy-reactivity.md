@@ -1,3 +1,12 @@
+---
+prev:
+  text: '⬅️ Phase 3 · L30 · 性能优化'
+  link: '/lessons/phase-3/L30-performance-e2e'
+next:
+  text: 'L32 · 依赖追踪'
+  link: '/lessons/phase-4/L32-dependency-tracking'
+---
+
 # L31 · 响应式原理：Proxy 实现
 
 ```
@@ -412,6 +421,11 @@ function reactive<T extends object>(target: T): T {
 git add .
 git commit -m "L31: 手写 mini 响应式系统 - Proxy + track + trigger"
 ```
+
+
+### 🔬 深度专题
+
+> 📖 [D03 · Proxy vs Object.defineProperty](/lessons/deep-dives/D03-proxy-vs-defineproperty) — Vue 3 为什么必须放弃 IE11？
 
 ### 🔗 → 下一节
 

@@ -1,3 +1,12 @@
+---
+prev:
+  text: '⬅️ Phase 1 · L08 · 本地持久化'
+  link: '/lessons/phase-1/L08-localstorage-composable'
+next:
+  text: 'L10 · Vue Router'
+  link: '/lessons/phase-2/L10-vue-router'
+---
+
 # L09 · 架构升级：从单文件到工程化
 
 ```
@@ -153,7 +162,7 @@ defineProps<{
 
 <template>
   <div class="todo-list">
-    <div v-for="todo in todos" :key="todo.id">
+    <div v-for="(todo, index) in todos" :key="todo.id">
       <!-- 作用域插槽：把 todo 数据暴露给父组件 -->
       <slot name="item" :todo="todo" :index="index" />
     </div>

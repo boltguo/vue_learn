@@ -266,6 +266,7 @@ function goToPage(p: number) {
       </button>
 
       <div class="page-numbers">
+        <!-- 简化版：渲染所有页码。生产环境应实现省略号分页（如 1 2 ... 8 9 10） -->
         <button
           v-for="p in data.pagination.totalPages"
           :key="p"
@@ -423,6 +424,11 @@ async function execute() {
 ---
 
 ## 6. 本节总结
+
+
+### 🔬 深度专题
+
+> 📖 [D13 · 请求竞态处理](/lessons/deep-dives/D13-request-race) — 快速切换页面时如何避免数据错乱？
 
 ### 检查清单
 

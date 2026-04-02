@@ -156,14 +156,25 @@ function patchProps(
   for (const key in newProps) {
     if (key === 'key') continue
     if (newProps[key] !== oldProps[key]) {
-      el.setAttribute(key, newProps[key])
+      if (key.startsWith('on')) {
+        // 事件：先移除旧监听器，再添加新的
+        const event = key.slice(2).toLowerCase()
+        if (oldProps[key]) el.removeEventListener(event, oldProps[key])
+        el.addEventListener(event, newProps[key])
+      } else {
+        el.setAttribute(key, newProps[key])
+      }
     }
   }
 
-  // 移除旧属性
+  // 移除旧属性/事件
   for (const key in oldProps) {
     if (!(key in newProps)) {
-      el.removeAttribute(key)
+      if (key.startsWith('on')) {
+        el.removeEventListener(key.slice(2).toLowerCase(), oldProps[key])
+      } else {
+        el.removeAttribute(key)
+      }
     }
   }
 }
@@ -346,6 +357,11 @@ flowchart LR
 git add .
 git commit -m "L33: Virtual DOM - mount/patch/diff + LIS 算法"
 ```
+
+
+### 🔬 深度专题
+
+> 📖 [D11 · Virtual DOM 的 O(n) diff](/lessons/deep-dives/D11-diff-algorithm) — 为什么 key 不能用 index？
 
 ### 🔗 → 下一节
 

@@ -281,6 +281,11 @@ git add .
 git commit -m "L34: PatchFlag + 静态提升 + Block Tree"
 ```
 
+
+### 🔬 深度专题
+
+> 📖 [D04 · 编译时优化：静态提升 + 靶向更新](/lessons/deep-dives/D04-compile-optimization) — Vue 3 凭什么比 React 快？
+
 ### 🔗 → 下一节
 
 L35 将讲解调度器原理——为什么 100 次修改只产生 1 次 DOM 更新，nextTick 到底在事件循环的哪个位置。

@@ -338,6 +338,11 @@ export const useTaskStore = defineStore('tasks', () => {
 
 ## 7. 本节总结
 
+
+### 🔬 深度专题
+
+> 📖 [D08 · Pinia vs Vuex 4 设计决策](/lessons/deep-dives/D08-pinia-vs-vuex) — 为什么 Pinia 成为官方推荐？
+
 ### 检查清单
 
 - [ ] 能安装和配置 Pinia

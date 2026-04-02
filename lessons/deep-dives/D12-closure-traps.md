@@ -169,8 +169,8 @@ refCount.value = 42
 
 // 模拟异步回调执行
 setTimeout(() => {
-  plainCallback()  // 普通变量: 42  ← 这里碰巧也是对的！
-  refCallback()    // ref.value: 42
+  plainCallback()  // 普通变量: 42  ← 闭包捕获的是变量绑定（引用），所以拿到最新值
+  refCallback()    // ref.value: 42  ← 同理，ref 对象引用 + getter
   
   // 但如果是函数参数传递的值就不同了...
   function createHandler(val) {

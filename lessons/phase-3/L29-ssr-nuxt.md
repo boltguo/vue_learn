@@ -192,6 +192,7 @@ const config = useRuntimeConfig()
 
 // useFetch：SSR 时在服务端执行，CSR 导航时在客户端执行
 // 数据自动在服务端 → 客户端传递（不会重复请求）
+// 💡 顶层 await 在 Nuxt 中可直接使用——Nuxt 为每个页面内置了 Suspense（回顾 L15）
 const { data: product, pending, error } = await useFetch(
   () => `${config.public.apiBase}/products/${route.params.id}`,
   {

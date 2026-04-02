@@ -1,3 +1,12 @@
+---
+prev:
+  text: 'L17 · 单元测试'
+  link: '/lessons/phase-2/L17-testing'
+next:
+  text: '🚀 Phase 3 → L19 · 后端搭建'
+  link: '/lessons/phase-3/L19-backend-setup'
+---
+
 # L18 · 部署上线：CI/CD
 
 ```
@@ -244,6 +253,55 @@ feature/kanban 分支
 ├── PR #5 → https://vue-todo-pr-5.vercel.app（预览）
 └── 合并后自动销毁预览
 ```
+
+---
+
+## 5.5 生产部署进阶
+
+### 构建产物分析
+
+上线前建议检查打包体积，避免引入过大的依赖：
+
+```bash
+# 安装分析插件
+npm install -D rollup-plugin-visualizer
+```
+
+```typescript
+// vite.config.ts
+import { visualizer } from 'rollup-plugin-visualizer'
+
+export default defineConfig({
+  plugins: [
+    vue(),
+    visualizer({
+      open: true,           // 构建后自动打开分析页面
+      gzipSize: true,       // 显示 gzip 后大小
+      brotliSize: true,     // 显示 brotli 后大小
+    }),
+  ],
+})
+```
+
+```bash
+npm run build  # 构建后自动打开 stats.html 可视化分析
+```
+
+### 回滚方案
+
+Vercel 保留每次部署的快照，回滚非常简单：
+
+```
+# 方式 1：Vercel 仪表板
+Deployments → 选择之前的稳定部署 → Promote to Production
+
+# 方式 2：Git 回滚
+git revert HEAD
+git push origin main  # 触发新部署，代码恢复到上一版本
+```
+
+> [!TIP]
+> 养成好习惯：每次上线前用 `npm run build && npx serve dist` 在本地验证生产构建，避免"开发环境正常、生产环境白屏"的问题。
 
 ---
 

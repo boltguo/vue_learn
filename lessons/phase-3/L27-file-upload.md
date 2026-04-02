@@ -132,7 +132,8 @@ router.post('/multiple',
   }
 )
 
-// multer 错误处理
+// multer 错误处理（挂在 router 上，优先于全局 errorHandler 处理上传相关错误）
+// 非 multer 错误会通过 next(err) 交给全局错误处理中间件
 router.use((err: any, req: Request, res: Response, next: NextFunction) => {
   if (err instanceof multer.MulterError) {
     if (err.code === 'LIMIT_FILE_SIZE') {

@@ -399,7 +399,7 @@ flowchart LR
 
 ## 7. 完善 TodoItem 组件
 
-把学到的知识综合运用，完善组件：
+把学到的知识综合运用，完善组件。我们在此增加一个新功能——**优先级（priority）**属性，体验如何扩展已有组件：
 
 ```vue
 <!-- src/components/TodoItem.vue 完整版 -->

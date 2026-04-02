@@ -223,6 +223,9 @@ flowchart TB
     style um fill:#ff634720,stroke:#ff6347
 ```
 
+> [!NOTE]
+> 此图不含 `<KeepAlive>` 独有的 `onActivated` / `onDeactivated` 钩子。使用 keep-alive 缓存组件时，卸载阶段不触发 `onUnmounted`，而是触发 `onDeactivated`；重新激活时触发 `onActivated`。
+
 ### 各钩子的使用建议
 
 | 钩子 | 典型用途 | 注意事项 |

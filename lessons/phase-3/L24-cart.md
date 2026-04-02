@@ -155,7 +155,7 @@ export const useCartStore = defineStore('cart', () => {
     addItem, removeItem, updateQuantity, toggleSelect, toggleAll,
     clearSelected, clearCart,
   }
-}, { persist: true })
+}, { persist: true })  // 需要 pinia-plugin-persistedstate 插件，详见 L11
 ```
 
 ---

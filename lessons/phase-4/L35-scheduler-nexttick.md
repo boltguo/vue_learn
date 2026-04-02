@@ -171,7 +171,8 @@ const pendingPreFlushJobs: SchedulerJob[] = []
 const pendingPostFlushJobs: SchedulerJob[] = []
 
 function queueJob(job: SchedulerJob) {
-  // 去重检查（用 id 或引用）
+  // 去重检查：这里用数组而非 Set，因为数组支持 sort()（按组件 uid 排序，§5）
+  // includes() 是 O(n)，但实际 queue 通常很短（几十个 job），可以忽略
   if (!queue.includes(job)) {
     queue.push(job)
     queueFlush()
@@ -347,10 +348,9 @@ watch(count, (v) => {
   console.trace('调用栈')  // 查看是同步还是微任务
 })
 
-// 2. 强制同步更新（调试用）
-import { flushSync } from 'vue'  // Vue 3.4+
+// 2. 确保 DOM 已更新后再操作
 count.value = 1
-flushSync()  // 立即触发 DOM 更新
+await nextTick()  // 等待 DOM 更新完成
 
 // 3. 性能监控
 const start = performance.now()
@@ -379,6 +379,11 @@ console.log('更新耗时:', performance.now() - start, 'ms')
 git add .
 git commit -m "L35: 调度器 + nextTick + 批量更新原理"
 ```
+
+
+### 🔬 深度专题
+
+> 📖 [D02 · Vue 3 响应式调度器 + nextTick](/lessons/deep-dives/D02-scheduler-nexttick) — 为什么修改数据后 DOM 不立即更新？
 
 ### 🔗 → 下一节
 

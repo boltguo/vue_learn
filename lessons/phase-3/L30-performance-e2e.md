@@ -1,3 +1,12 @@
+---
+prev:
+  text: 'L29 · SSR 与 Nuxt'
+  link: '/lessons/phase-3/L29-ssr-nuxt'
+next:
+  text: '🚀 Phase 4 → L31 · 响应式原理'
+  link: '/lessons/phase-4/L31-proxy-reactivity'
+---
+
 # L30 · 性能优化 + E2E 测试 + Phase 3 总结
 
 ```

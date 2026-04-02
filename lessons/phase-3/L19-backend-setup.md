@@ -1,3 +1,12 @@
+---
+prev:
+  text: '⬅️ Phase 2 · L18 · 部署上线'
+  link: '/lessons/phase-2/L18-deployment'
+next:
+  text: 'L20 · RESTful API'
+  link: '/lessons/phase-3/L20-restful-api'
+---
+
 # L19 · 后端搭建：Express + MongoDB
 
 ```
